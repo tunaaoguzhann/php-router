@@ -57,7 +57,7 @@ class Router implements RouterInterface
     // Yeni eklenen metodlar
     public function run(): void
     {
-        // Önce Postman senkronizasyonunu yap
+        // Önce senkronizasyonu yap
         $this->syncWithPostman();
 
         $method = $_SERVER['REQUEST_METHOD'];
@@ -125,9 +125,9 @@ class Router implements RouterInterface
 
     public function syncWithPostman(): void
     {
-        if ($this->shouldSync && $this->postmanSync) {
+        // shouldSync kontrolünü kaldırıyoruz, her zaman senkronize et
+        if ($this->postmanSync) {
             $this->postmanSync->updateCollection($this->routes->all());
-            $this->shouldSync = false;
         }
     }
 
