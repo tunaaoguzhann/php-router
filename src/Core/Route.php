@@ -30,6 +30,11 @@ class Route
     {
         return $this->path;
     }
+    public function matches(string $method, string $path): bool
+    {
+        return $this->method === $method && $this->path === $path;
+    }
+
 
     public function getHandler()  // return type hint'i kaldırdık
     {
@@ -45,4 +50,5 @@ class Route
     {
         return $this->handler !== null;
     }
+
 }
