@@ -25,6 +25,7 @@ class Router implements RouterInterface
             $_ENV['POSTMAN_API_KEY'],
             $_ENV['POSTMAN_COLLECTION_ID']
         );
+        $this->syncWithPostman();
     }
 
     public function get(string $path, mixed $handler = null, array $options = []): void
