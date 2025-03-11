@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Postman;
+namespace TunaOguzhan\Router\Postman;
 
-use App\Interfaces\PostmanSyncInterface;
+use TunaOguzhan\Router\Interfaces\PostmanSyncInterface;
 use GuzzleHttp\Client;
-use App\Postman\PostmanFormatter;
+use TunaOguzhan\Router\Postman\PostmanFormatter;
 
 class PostmanSync implements PostmanSyncInterface
 {

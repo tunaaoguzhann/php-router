@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Postman;
+namespace TunaOguzhan\Router\Postman;
 
-use App\Core\Route;
+use TunaOguzhan\Router\Core\Route;
 
 class PostmanFormatter
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Core;
+namespace TunaOguzhan\Router\Core;
 
-use App\Interfaces\RouterInterface;
-use App\Postman\PostmanSync;
+use TunaOguzhan\Router\Interfaces\RouterInterface;
+use TunaOguzhan\Router\Postman\PostmanSync;
 use Dotenv\Dotenv;
 
 class Router implements RouterInterface
