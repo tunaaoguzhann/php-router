@@ -57,6 +57,9 @@ class Router implements RouterInterface
     // Yeni eklenen metodlar
     public function run(): void
     {
+        // Önce Postman senkronizasyonunu yap
+        $this->syncWithPostman();
+
         $method = $_SERVER['REQUEST_METHOD'];
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
